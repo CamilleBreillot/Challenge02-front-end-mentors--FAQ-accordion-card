@@ -39,6 +39,7 @@ p {
   border-radius: 20px;
   padding: 30px;
   display: flex;
+  flex-direction: row;
   position: relative;
   width: 775px;
   height: 400px;
@@ -122,4 +123,55 @@ p {
 
 .arrow-active {
   transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 800px){
+  .container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-card {
+    flex-direction: column;
+    width: 320px;
+    height: 500px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .faq-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+  }
+
+  .img-section {
+    flex: 0%;
+  }
+
+  .faq-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .question {
+    width: 80%;
+  }
+
+  .main-img {
+    position: absolute;
+    width: 40%;
+    top: 100px;
+    right: 80px;
+  }
+
+  .attribution {
+    display: none;
+  }
+
 }
