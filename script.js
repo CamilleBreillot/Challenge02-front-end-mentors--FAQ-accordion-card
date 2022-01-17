@@ -10,17 +10,17 @@ const closeAnswer = () => arrayClickableQuestions.forEach(clickableQuestion => {
   clickableQuestion.children[1].children[0].classList.remove('arrow-active');
 });
 
-function displayAnswer(event) {
+const displayAnswer = (event) => {
   const answer = event.currentTarget.nextElementSibling.children[0];
   const questionTitle = event.currentTarget.children[0];
   const arrow = event.currentTarget.children[1].children[0];
   if (answer.style.display == "none") {
-    closeAnswer();
+  closeAnswer();
   }
   answer.style.display == "none" || answer.style.display == '' ? answer.style.display = "block" : answer.style.display = "none";
   questionTitle.classList.toggle('title-active');
   arrow.classList.toggle('arrow-active');
-}
+};
 
 //listen to event
 arrayClickableQuestions.forEach(clickableQuestion => {

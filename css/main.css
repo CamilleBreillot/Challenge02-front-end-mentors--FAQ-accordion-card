@@ -7,7 +7,6 @@ body {
   font-size: 12px;
   background-image: linear-gradient(to bottom, #9e36d1, #942fd6, #8828db, #7922e0, #671ee6);
   height: 100vh;
-  z-index: 1;
 }
 
 .container {
@@ -58,6 +57,10 @@ p {
   position: absolute;
   bottom: -170px;
   right: 485px;
+}
+
+.shawdowImgMobile {
+  display: none;
 }
 
 .box-img {
@@ -126,6 +129,11 @@ p {
 }
 
 @media only screen and (max-width: 800px){
+
+  body {
+    height: 110vh;
+  }
+
   .container {
     justify-content: center;
     align-items: center;
@@ -135,9 +143,11 @@ p {
     flex-direction: column;
     width: 320px;
     height: 500px;
-    padding: 15px;
+    padding: 0px;
+    margin-top: 13em;
+    margin-bottom: 5em;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
   }
 
   .faq-section {
@@ -145,17 +155,19 @@ p {
     display: flex;
     justify-content: center;
     padding-bottom: 60px;
+    padding-top: 100px;
   }
 
   .img-section {
     flex: 0%;
+    clip-path: none;
   }
 
   .faq-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
   }
 
@@ -164,10 +176,27 @@ p {
   }
 
   .main-img {
+    top: -111px;
+    right: 52px;
+    width: 70%;
+  }
+
+  .box-img {
+    top: -46px;
+    right: 192px;
+    width: 28%;
+  }
+
+  .shawdow-desktop {
+    display: none;
+  }
+
+  .shawdowImgMobile {
+    display: block;
     position: absolute;
-    width: 40%;
-    top: 100px;
-    right: 80px;
+    left: 43px;
+    top: -8px;
+    width: 70%;
   }
 
   .attribution {
