@@ -4,7 +4,7 @@ arrayClickableQuestions = Array.from(clickableQuestions);
 
 //write functions
 
-const closeAnswer = () => arrayClickableQuestions.forEach(clickableQuestion => {
+const closeAllAnswers = () => arrayClickableQuestions.forEach(clickableQuestion => {
   clickableQuestion.nextElementSibling.children[0].style.display = "none";
   clickableQuestion.children[0].classList.remove('title-active');
   clickableQuestion.children[1].children[0].classList.remove('arrow-active');
@@ -15,7 +15,7 @@ const displayAnswer = (event) => {
   const questionTitle = event.currentTarget.children[0];
   const arrow = event.currentTarget.children[1].children[0];
   if (answer.style.display == "none") {
-  closeAnswer();
+  closeAllAnswers();
   }
   answer.style.display == "none" || answer.style.display == '' ? answer.style.display = "block" : answer.style.display = "none";
   questionTitle.classList.toggle('title-active');
