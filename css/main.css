@@ -18,7 +18,14 @@ h1 {
 
 h4 {
   font-weight: lighter;
+  margin-block-start: 0.7em;
+  margin-block-end: 0.7em;
 }
+
+p {
+  opacity: 0.6;
+}
+
 
 .main-card {
   background-color: white;
@@ -73,6 +80,7 @@ h4 {
 
 .answer-details {
   display: none;
+  margin-block-start: 0em;
 }
 
 .divider {
@@ -82,4 +90,13 @@ h4 {
   border: none;
   background-color: grey;
   opacity: 30%;
+}
+
+/* For JS */
+.title-active {
+  font-weight: bolder;
+}
+
+.arrow-active {
+  transform: rotate(180deg);
 }
