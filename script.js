@@ -2,25 +2,23 @@
 clickableQuestions = document.querySelectorAll('.question');
 arrayClickableQuestions = Array.from(clickableQuestions);
 
-arrows = document.getElementsByClassName('arrow');
-arrayArrows = Array.from(arrows);
-
-questions = document.querySelectorAll('.question h4');
-arrayQuestions = Array.from(questions);
-
-answers = document.querySelectorAll('.answer-details');
-arrayAnswers = Array.from(answers);
-
 //write functions
 
+const closeAnswer = () => arrayClickableQuestions.forEach(clickableQuestion => {
+  clickableQuestion.nextElementSibling.children[0].style.display = "none";
+  clickableQuestion.children[0].classList.remove('title-active');
+  clickableQuestion.children[1].children[0].classList.remove('arrow-active');
+});
+
 const displayAnswer = (event) => {
-  answer = event.currentTarget.nextElementSibling.children[0];
+  const answer = event.currentTarget.nextElementSibling.children[0];
+  const questionTitle = event.currentTarget.children[0];
+  const arrow = event.currentTarget.children[1].children[0];
+  if (answer.style.display == "none") {
+  closeAnswer();
+  }
   answer.style.display == "none" || answer.style.display == '' ? answer.style.display = "block" : answer.style.display = "none";
-
-  questionTitle = event.currentTarget.children[0];
   questionTitle.classList.toggle('title-active');
-
-  arrow = event.currentTarget.children[1].children[0];
   arrow.classList.toggle('arrow-active');
 };
 
