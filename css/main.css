@@ -12,6 +12,14 @@ body {
   z-index: 1;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+h4 {
+  font-weight: lighter;
+}
+
 .main-card {
   background-color: white;
   border-radius: 20px;
@@ -33,19 +41,45 @@ body {
 
 .shawdow-desktop {
   position: absolute;
-  bottom: -70px;
-  right: 550px;
+  bottom: -170px;
+  right: 485px;
 }
 
 .box-img {
   position: absolute;
-  top: 180px;
-  right: 855px;
+  top: 195px;
+  right: 750px;
   z-index: 1;
+  width: 20%;
 }
 
 .main-img {
   position: absolute;
-  top: 45px;
-  right: 550px;
+  top: 70px;
+  right: 485px;
+  width: 50%;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.answer-wrapper {
+  width: 80%;
+}
+
+.answer-details {
+  display: none;
+}
+
+.divider {
+  width: 100%;
+  padding-right: 0px;
+  height: 1px;
+  border: none;
+  background-color: grey;
+  opacity: 30%;
 }
